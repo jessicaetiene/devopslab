@@ -67,10 +67,10 @@ jobs:
 
       - name: Build Image & Push
         env: 
-          ARTIFACT_REGISTRY: ${{ secrets.ARTIFACT_REGISTRY }}
+          ARTIFACT_REGISTRY_REPO: ${{ secrets.ARTIFACT_REGISTRY_REPO }}
         run: | 
-          docker build -t ${{ secrets.ARTIFACT_REGISTRY }}/myapp:latest .
-          docker push ${{ secrets.ARTIFACT_REGISTRY }}/myapp:latest
+          docker build -t ${{ secrets.ARTIFACT_REGISTRY_REPO }}/myapp:latest .
+          docker push ${{ secrets.ARTIFACT_REGISTRY_REPO }}/myapp:latest
 
   DeployHom:
     needs: Build
