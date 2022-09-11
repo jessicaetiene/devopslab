@@ -1,6 +1,17 @@
+ 2.71 KB
+
+# Nome do Workflow
+name: DevOpsLab Pipeline
+
+# Evento que irá acionar a pipeline
+on: 
+  push:
+    branches:
+      - main
+
 jobs:
   Tests:
-   name: Tests
+    name: Tests
     runs-on: ubuntu-latest
     steps:
       - name: Setup Python
@@ -27,10 +38,10 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  
 
   Build:
-      needs: Tests
-      name: Build
-      runs-on: ubuntu-latest
-      steps: 
+    needs: Tests
+    name: Build
+    runs-on: ubuntu-latest
+    steps: 
 
       - name: Checkout Repo
         uses: actions/checkout@v2
