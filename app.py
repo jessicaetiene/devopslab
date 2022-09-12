@@ -1,14 +1,16 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_wtf.csrf import CSRFProtect
 import os
 
 app = Flask(__name__)
 
-csrf = CSRFProtect(app) 
+csrf = CSRFProtect(app)
+
 
 @app.route("/")
 def pagina_inicial():
-    return "Laboratório DevOps - FIAP 8ASO - v02"
+    return render_template('index.html')
+
 
 if __name__ == '__main__':
     port = os.getenv('PORT')

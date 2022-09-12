@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+	xBe by TEMPLATE STOCK
+	templatestock.co @templatestock
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Solution Sprint - Grupo 07</title>
+
+    <!-- Bootstrap Core CSS -->
+
+    <link href="{{ url_for('static', filename='styles/bootstrap.css') }}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+
+    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+
+   <link href="{{ url_for('static', filename='styles/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+   <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900' rel='stylesheet' type='text/css'>
+   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+
+
+    <!-- Custom Animations -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/animate.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Slider -->
+    <section id="slider">
+      <div id="myCarousel-one" class="carousel slide">
+
+       <ol class="carousel-indicators">
+            <li data-target="#myCarousel-one" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel-one" data-slide-to="1"></li>
+
+        </ol>
+
+            <div class="carousel-inner">
+                <div class="item active">
+
+                    <div class="carousel-caption wrapper">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="intro-text">
+                                    <h1 class="intro-lead-in animated bounceInLeft">Solution Sprint - Grupo 07</h1>
+                                    <h2 class="intro-heading animated bounceInRight">ARQUITETURA DE SOLUÇÕES</h2>
+                                    <p class="intro-paragraph animated bounceInRight">Ao final dos encontros, seremos capazes de construir uma pipeline de CI/CD, indo do desenvolvimento de uma aplicação até sua entrada em produção</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="{{ url_for('static', filename='img/backgrounds/header-one.png') }}" alt="slider-image"/>
+
+                </div>
+                <div class="item">
+                    <div class="carousel-caption wrapper">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="intro-text">
+                                    <h1 class="intro-lead-in animated bounceInLeft">FASE 5</h1>
+                                    <h2 class="intro-heading animated bounceInRight">ON THE CLOUDS</h2>
+                                    <p class="intro-paragraph animated bounceInRight">Tecnologias: Python, Flask, GitHub, Doker, Heroku, Sonar, Google Cloud Plataform, Terraform, New Relic</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <img src="{{ url_for('static', filename='img/backgrounds/header-two.png') }}"  alt="slider-image"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+
+
+</body>
+
+</html>
