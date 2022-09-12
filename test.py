@@ -1,19 +1,20 @@
-from app import app                                                                                                                                                                                      
-import unittest                                                                                                                                                                                          
-                                                                                                                                                                                                         
-class Test(unittest.TestCase):                                                                                                                                                                           
-                                                                                                                                                                                                         
-    def setUp(self):                                                                                                                                                                                     
+from app import app
+import unittest
+
+
+class Test(unittest.TestCase):
+
+    def setUp(self):
         # cria uma instância do unittest, precisa do nome "setUp"                                                                                                                                        
-        self.app = app.test_client()                                                                                                                                                                     
-                                                                                                                                                                                                         
+        self.app = app.test_client()
+
         # envia uma requisicao GET para a URL                                                                                                                                                            
-        self.result = self.app.get('/')                                                                                                                                                                  
-                                                                                                                                                                                                         
-    def test_requisicao(self):                                                                                                                                                                           
+        self.result = self.app.get('/')
+
+    def test_requisicao(self):
         # compara o status da requisicao (precisa ser igual a 200)                                                                                                                                       
-        self.assertEqual(self.result.status_code, 200)                                                                                                                                                   
-                                                                                                                                                                                                         
-    def test_conteudo(self):                                                                                                                                                                             
+        self.assertEqual(self.result.status_code, 200)
+
+    def test_conteudo(self):
         # verifica o retorno do conteudo da pagina                                                                                                                                                       
-        self.assertEqual(self.result.data.decode('utf-8'), "Laboratório DevOps - FIAP 8ASO - v02")
+        self.assertIn('text/html', self.result.content_type)
